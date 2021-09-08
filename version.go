@@ -1,8 +1,3 @@
-# version
-
-This package contains build information generated at build time and compiled into the binary.
-
-```go
 // Package version contains build information such as the git commit, app version, build date.
 //
 // This info generated at build time and compiled into the binary.
@@ -29,4 +24,35 @@ This package contains build information generated at build time and compiled int
 // rm -rf ${BIN_OUT}
 //
 // go build -o ${BIN_OUT} -a -ldflags "${GO_BUILD_LDFLAGS}" "${GO_BUILD_PACKAGE}"
-```
+
+package version
+
+const unset = "unset"
+
+var ( // build info
+	version     = unset
+	builddate   = unset
+	commit      = unset
+	shortcommit = unset
+	appname     = unset
+)
+
+func GetVersion() string {
+	return version
+}
+
+func GetBuildDate() string {
+	return builddate
+}
+
+func GetCommit() string {
+	return commit
+}
+
+func GetAppName() string {
+	return appname
+}
+
+func GetShortCommit() string {
+	return shortcommit
+}
