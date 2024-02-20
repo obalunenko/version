@@ -1,3 +1,5 @@
 module github.com/obalunenko/version
 
-go 1.17
+go 1.22
+
+toolchain go1.22
