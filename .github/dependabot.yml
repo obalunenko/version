@@ -15,13 +15,12 @@ updates:
       prefix: "chore"
       include: "scope"
 
-  - package-ecosystem: "gomod"
-    directory: "/tools/"
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     labels:
       - "dependencies"
-      - "go"
     assignees:
       - "obalunenko"
     reviewers:
