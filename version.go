@@ -43,11 +43,15 @@ func init() {
 		}
 	}
 
+	shortcommit = commit[:7]
+
 	if modified {
 		commit += "+CHANGES"
+		shortcommit += "+CHANGES"
 	}
 
-	appname = info.Main.Path
+	appname = info.Path
+	version = info.Main.Version
 }
 
 // GetGoVersion returns the go version
